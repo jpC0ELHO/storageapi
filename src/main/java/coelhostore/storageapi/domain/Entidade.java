@@ -2,6 +2,7 @@ package coelhostore.storageapi.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,8 +25,7 @@ import java.util.UUID;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 @MappedSuperclass
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class )
 public abstract class Entidade implements Serializable {
