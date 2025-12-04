@@ -28,4 +28,6 @@ public class EstoqueSaida extends Entidade{
     private LocalDate dataSaida;
     @Column(nullable = false)
     private String motivoSaida; // VENDA, CONSUMO, PERDA, AJUSTE, RESERVA
+    @Embedded
+    private Cliente cliente;
 }
