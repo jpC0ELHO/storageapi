@@ -20,15 +20,27 @@ public class EstoqueEntrada extends Entidade{
     @ManyToOne
     @JoinColumn(name = "produto_id", nullable = false)
     private Produtos produto;
-    @ManyToOne
-    @JoinColumn(name = "fornecedor_id", nullable = false)
+    @Embedded
     private Fornecedor fornecedor;
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal quantidade;
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal valorUnidade;
     @Column(precision = 5, scale = 2)
-    private BigDecimal impostoImportacao;
+    private BigDecimal impostos;
     @Column(nullable = false)
     private LocalDate dataEntrada;
+    @Column(name = "valor_total")
+    private BigDecimal valorTotalBruto;//calculo sem imposto
+    private BigDecimal calculoValorBruto(BigDecimal valorTotalBruto){
+       var valores=getValorUnidade().multiply(quantidade);
+       return this.valorTotalBruto =valores;
+    }
+    @Column(name = "valor_total_liquido")
+    private BigDecimal valorTotalLiquido;//calculo com impostos
+    private BigDecimal calculoValorLiquido(BigDecimal valorTotalLiquido){
+        var valores=getValorUnidade().multiply(quantidade);
+       return this.valorTotalLiquido =valores.subtract(impostos);
+    }
 }
+
