@@ -25,6 +25,8 @@ public class Usuario extends Entidade implements UserDetails {
     private String username;
     @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
+    private String email;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
