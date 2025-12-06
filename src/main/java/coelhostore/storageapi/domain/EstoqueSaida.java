@@ -24,6 +24,10 @@ public class EstoqueSaida extends Entidade{
     private BigDecimal quantidade;
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal valorSaida;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal transporteValor;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal imposto;
     @Column(nullable = false)
     private LocalDate dataSaida;
     @Column(nullable = false)
