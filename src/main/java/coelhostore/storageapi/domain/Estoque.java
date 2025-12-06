@@ -25,12 +25,12 @@ public class Estoque extends Entidade{
     private BigDecimal quantidade;
     @Column(name = "valor_em_estoque",nullable = false,scale = 2,precision = 12)
     private BigDecimal valorEmEstoque;
+    @Column(nullable = false)
+    private BigDecimal quantidadeReservada;
     //fornecer o tipo de estoque em que esta armazenado
     @Enumerated(EnumType.STRING)
     private EstoqueTipo estoqueTipo;
     //Quantidade definida em unidades de medida
     @Enumerated(EnumType.STRING)
     private TipologiaEstoque tipologiaEstoque;
-    @Column(nullable = false)
-    private BigDecimal quantidadeReservada;
 }
