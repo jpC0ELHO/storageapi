@@ -43,7 +43,7 @@ Lombok
 
 Maven
 
-Estrutura das Entidades
+- Estrutura das Entidades:
 Entidade (classe base)
 
  ├── Usuario
@@ -61,7 +61,7 @@ Entidade (classe base)
  └── EstoqueSaida
 
 
-A classe base Entidade contém:
+- A classe base Entidade contém:
 
 UUID
 
@@ -82,7 +82,7 @@ PUT /produtos/{id} — atualiza produto
 
 DELETE /produtos/{id} — remove produto
 
-Estoque
+- Estoque
 
 GET /estoque — consulta saldo do estoque
 
@@ -92,9 +92,9 @@ POST /estoque/saida — registra saída
 
 (Endpoints podem variar conforme implementação final.)
 
-Banco de Dados
+# Banco de Dados
 
-Modelo relacional com tabelas normalizadas:
+- Modelo relacional com tabelas normalizadas:
 
 usuarios
 
@@ -119,7 +119,7 @@ Backend empacotado em imagem Java com JAR final.
 
 docker-compose.yml
 
-Serviços:
+- Serviços:
 
 api
 
@@ -129,8 +129,8 @@ Volume persistente para banco
 
 Rede compartilhada
 
-Como Executar
-Pré-requisitos
+# Como Executar
+- Pré-requisitos
 
 Java 17+
 
@@ -145,7 +145,7 @@ mvn spring-boot:run
 Executar via Docker
 docker-compose up -d
 
-Estrutura do Projeto
+- Estrutura do Projeto
 src/
 
  ├── main/
