@@ -3,7 +3,7 @@
 Aplicação de gerenciamento de estoque desenvolvida em Java Spring Boot, com arquitetura organizada em entidades, repositórios e serviços. O objetivo é registrar entradas e saídas de produtos, gerenciar fornecedores, usuários e manter controle completo do inventário.
 O sistema utiliza um banco de dados relacional, podendo compartilhar o mesmo servidor da Smart House do usuário.
 
-Funcionalidades Principais
+# Funcionalidades Principais:
 
 Registro de Produtos.
 
@@ -19,7 +19,7 @@ Integração com Docker (containerização do backend e banco).
 
 API REST estruturada com Spring Boot para comunicações futuras com GUI, sensores ou sistemas externos.
 
-Tecnologias Utilizadas
+# Tecnologias Utilizadas:
 
 Java 17+
 
@@ -45,12 +45,19 @@ Maven
 
 Estrutura das Entidades
 Entidade (classe base)
+
  ├── Usuario
+ 
  ├── Cliente
+ 
  ├── Fornecedor
+ 
  ├── Produto
+ 
  ├── Estoque
+ 
  ├── EstoqueEntrada
+ 
  └── EstoqueSaida
 
 
@@ -140,23 +147,33 @@ docker-compose up -d
 
 Estrutura do Projeto
 src/
+
  ├── main/
+ 
  │   ├── java/
+ 
  │   │   └── com.suaempresa.estoque/
+ 
  │   │        ├── controllers
+ 
  │   │        ├── services
+ 
  │   │        ├── repositories
+ 
  │   │        └── models
+ 
  │   └── resources/
+ 
  │       ├── application.yml
+ 
  │       └── schemas.sql (opcional)
 
-Futuras Implementações
+# Futuras Implementações:
 
-Integração com WebSockets.
+- Integração com WebSockets.
 
-Autenticação avançada (usuários e administradores).
+- Autenticação avançada (usuários e administradores).
 
-Painel gráfico via web ou app.
+- Painel gráfico via web ou app.
 
-Logs estruturados acessíveis ao usuário quando desejado.
+- Logs estruturados acessíveis ao usuário quando desejado.
