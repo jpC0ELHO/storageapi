@@ -31,13 +31,13 @@ public class EstoqueEntrada extends Entidade{
     @Column(nullable = false)
     private LocalDate dataEntrada;
     @Column(name = "valor_total")
-    private BigDecimal valorTotalBruto;//calculo sem imposto
+    private BigDecimal valorTotalBruto;//calculo sem imposto TESTE
     private BigDecimal calculoValorBruto(BigDecimal valorTotalBruto){
        var valores=getValorUnidade().multiply(quantidade);
        return this.valorTotalBruto =valores;
     }
     @Column(name = "valor_total_liquido")
-    private BigDecimal valorTotalLiquido;//calculo com impostos
+    private BigDecimal valorTotalLiquido;//calculo com impostos TESTE
     private BigDecimal calculoValorLiquido(BigDecimal valorTotalLiquido){
         var valores=getValorUnidade().multiply(quantidade);
        return this.valorTotalLiquido =valores.subtract(impostos);
