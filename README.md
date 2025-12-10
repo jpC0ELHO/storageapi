@@ -1,5 +1,4 @@
-Sistema de Gerenciamento de Estoque (Spring Boot)
-Visão Geral
+# Sistema de Gerenciamento de Estoque
 
 Aplicação de gerenciamento de estoque desenvolvida em Java Spring Boot, com arquitetura organizada em entidades, repositórios e serviços. O objetivo é registrar entradas e saídas de produtos, gerenciar fornecedores, usuários e manter controle completo do inventário.
 O sistema utiliza um banco de dados relacional, podendo compartilhar o mesmo servidor da Smart House do usuário.
