@@ -138,11 +138,13 @@ Maven
 
 Docker (opcional, se usar containerização)
 
-Executar via Maven
+- Executar via Maven:
 mvn clean install
+
 mvn spring-boot:run
 
-Executar via Docker
+- Executar via Docker:
+- 
 docker-compose up -d
 
 - Estrutura do Projeto
