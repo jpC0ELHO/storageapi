@@ -32,12 +32,12 @@ public class EstoqueController {
     public void createEstoque(@RequestBody EstoqueRequest estoqueRequest){
         estoqueService.createEstoque(estoqueRequest);
     }
-    @PutMapping(value = "{/id}",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/{id}",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public void updateEstoque(@PathVariable UUID id,@RequestBody EstoqueRequest estoqueRequest){
         estoqueService.updateEstoque(id,estoqueRequest);
     }
-    @DeleteMapping(value = "{/id}")
+    @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteEstoque(@PathVariable UUID id){
         estoqueService.deleteEstoque(id);
