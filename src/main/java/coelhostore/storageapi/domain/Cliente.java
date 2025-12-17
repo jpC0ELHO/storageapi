@@ -6,13 +6,14 @@ import lombok.Data;
 
 @Data
 @Embeddable
-public class Cliente extends Entidade{
+public class Cliente{
     private String nome;
     @Enumerated(EnumType.STRING)
     private DocumentoTipo documentoTipo;
+    private Integer numeroDocumento;
     @Embedded
     private Contato contato;
     @ManyToOne
-    @JoinColumn(name = "endereco_id", nullable = false)
+    @JoinColumn(name = "endereco_id")
     private Endereco endereco;
 }
