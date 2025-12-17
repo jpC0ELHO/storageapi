@@ -4,6 +4,8 @@ import coelhostore.storageapi.domain.enums.DocumentoTipo;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 @Embeddable
 public class Fornecedor {
@@ -11,9 +13,10 @@ public class Fornecedor {
     private String nome;
     @Enumerated(EnumType.STRING)
     private DocumentoTipo documentoTipo;
+    private Integer numeroDocumento;
     @Embedded
     private Contato contato;
     @ManyToOne
-    @JoinColumn(name = "endereco_id", nullable = false)
+    @JoinColumn(name = "endereco_id")
     private Endereco endereco;
 }
