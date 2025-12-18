@@ -4,8 +4,6 @@ import coelhostore.storageapi.domain.enums.DocumentoTipo;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.math.BigDecimal;
-
 @Data
 @Embeddable
 public class Fornecedor {
