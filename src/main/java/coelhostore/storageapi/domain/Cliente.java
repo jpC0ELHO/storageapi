@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Embeddable
-public class Cliente{
+public class Cliente {
     private String nome;
     @Enumerated(EnumType.STRING)
     private DocumentoTipo documentoTipo;
